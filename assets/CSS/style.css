@@ -1,0 +1,47 @@
+/*Fonte er indsat efter googles egen vejledning- der forefindes her https://fonts.google.com/knowledge/using_type/using_web_fonts
+*/
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito/Nunito-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/*Variabler*/
+:root {
+    --backgroundColor: #FFF9F9;
+    --primaeryCTA: #226F22;
+    --seckundaryCTA: #8E690A;
+    /* husk at få spaceing varialbel ind her også */
+}
+
+/* Generel styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: var(--backgroundColor);
+}
+
+h1,
+h2,
+h3,
+h4,
+a,
+button {
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+
+}

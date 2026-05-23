@@ -18,10 +18,32 @@
 
 /*Variabler*/
 :root {
-    --backgroundColor: #FFF9F9;
-    --primaeryCTA: #226F22;
-    --seckundaryCTA: #8E690A;
+    --backgroundColor:#FCFCFC ;
+    --primaeryCTA:#1C009D ;
+    --secondaryCTA: #F9B000;
+    --cardsColor: #006784;
+    --textColor: #00222E;
     /* husk at få spaceing varialbel ind her også */
+
+    /* Fontsizes */
+    --H1_Desktop: 2.625rem;
+    --H2_Desktop: 2rem;
+    --H3_Desktop: 2rem;
+    --body_text_Desktop: 1rem;
+
+    --H1_Mobil: 1.25rem;
+    --H2_Mobil: 1.25rem;
+    --H3_Mobil: 1rem;
+    --body_text_Mobil: 0.75rem;
+
+    /* Spacing */
+    --Section_Desktop: 8rem;
+    --Elements_Desktop: 4rem;
+    --Small_Elements_Desktop: 2rem;
+
+    --Section_Mobil: 2.25rem;
+    --Elements_Mobil: 1.25rem;
+    --Small_Elements_Mobil: 1rem;
 }
 
 /* Generel styling */
@@ -44,4 +66,67 @@ button {
     font-weight: bold;
     font-style: normal;
 
+}
+/*  */
+/* på mobil */
+/*  */
+.sectionContent{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h1 {
+    font-size: var(--H1_Mobil);
+}
+h2, h3{
+    font-size: var(--H2_Mobil);
+}
+
+/* knapper */
+.buttonsecondary{
+    border-radius: 100px;
+    padding: 0.7rem 2rem 0.7rem 2rem;
+    background-color: var(--secondaryCTA);
+    text-decoration: none;
+    color: var(--textColor);
+    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.buttonsecondaryFrontpage {
+    border-radius: 100px;
+    padding: 0.7rem 2rem 0.7rem 2rem;
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--textColor);
+    border: solid 2px var(--secondaryCTA);
+    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+/*  */
+/* mobil slut */
+/*  */
+
+/*  */
+/* på desktop */
+/*  */
+@media screen and (min-width: 768px){
+    h1{
+        font-size: var(--H1_Desktop);
+    }
+     h2, h3{
+    font-size: var(--H2_Desktop);
+ }
+    
+}
+
+
+/*  */
+/* Forsiden */
+/*  */
+#heroImageFrontpage{
+    max-width: 584px;
+}
+@media screen and (min-width: 768px) {
+    .heroSection{
+        display: flex;
+        flex-direction: row-reverse;
+    }
 }

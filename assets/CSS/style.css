@@ -15,6 +15,20 @@
     font-style: italic;
     font-display: swap;
 }
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Italic-VariableFont_wdth\,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
 
 /*Variabler*/
 :root {
@@ -65,7 +79,14 @@ button {
     font-family: "Nunito", sans-serif;
     font-weight: bold;
     font-style: normal;
-
+}
+h1,h2,h3{
+    padding-bottom: 8px;
+}
+p{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
 }
 /*  */
 /* på mobil */
@@ -129,4 +150,15 @@ h2, h3{
         display: flex;
         flex-direction: row-reverse;
     }
+}
+
+
+
+
+/**/
+/* Footer */
+/*  */
+footer{
+    display: flex;
+    align-items: center;
 }

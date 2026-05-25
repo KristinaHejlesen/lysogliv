@@ -120,6 +120,20 @@ h2, h3{
     border: solid 2px var(--secondaryCTA);
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
+#primaeryCTA{
+    border-radius: 100px;
+    text-decoration: none;
+    background-color: var(--primaeryCTA);
+    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: white;
+    padding: 0.7rem 2rem 0.7rem 2rem;
+    
+}
+#primaeryCTAsvg{
+    vertical-align: middle;
+    margin-right: 5px;
+    fill: white;
+}
 
 /*  */
 /* mobil slut */
@@ -137,6 +151,152 @@ h2, h3{
  }
     
 }
+/*  */
+/* NAV */
+/*  */
+header{
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    max-height: 5.5rem;
+}
+#logo{
+   
+    max-height: 85px;
+    
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: var(--Elements_Desktop);
+    max-width: 1200px;
+    margin: 0 auto;   
+}
+
+.globalNav {
+    display: flex;
+    
+}
+.globalNav a{
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+#menu{
+    display: none;
+}
+
+.navcontainer ul {
+    display: flex;
+    gap: 2rem;
+}
+.navcontainer li{
+    list-style-type: none;
+}
+.dropdownIndhold {
+    display: none;
+    flex-direction: column; /*Sikre at indholdet i dropdown menuen står under hinanden*/
+    /* sørger for at dropdown indholdet placeres i toppen lige under button */
+    position: absolute; 
+    top: 100%;
+    right: -20%;
+    /*  sørger for at indholdet følger knappens bredde*/
+    width: 120%;
+    /* z-index så indholdet bliver lagt ovenpå andet i hero sektionen */
+    z-index: 100; 
+    background-color: var(--backgroundColor);
+    padding: 0.5rem;
+    border-radius: 15px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+.dropdownLinks a{
+    padding-bottom: 0.5rem;
+}
+/* sikre at dropdown åbner lige under knappen */
+.dropdown{
+    position: relative;
+}
+
+
+
+/* dropdownIndholdet får tilføjet class show, som er display flex, istedet for none. Derved vises indholdet af links. */
+.show{
+    display: flex;
+}
+
+/* styling af button så den ligner de andre links i navigationen */
+.dropbtn{
+    background-color: var(--backgroundColor);
+    font-size: 1rem;
+    padding: 0;
+    border: none;
+    color: var(--textColor);
+    /* sikre at pilen/svg stiller sig på samme linje som linket */
+    svg{
+        vertical-align: middle;
+        fill: currentColor;
+    }
+}
+/* mobil NAV */
+@media screen and (max-width: 768px){
+    /* gør så burgermenu bliver synlig under 768px, samt den globale navigation skjules */
+    #menu{
+        display: flex;
+        z-index: 100;
+        border: none;
+        background-color: var(--backgroundColor);
+    }
+
+    .globalNav{
+        display: none;
+    }
+    /* sikre når class tilføjes så bliver den globale navigation synlig (når der trykkes på brugermenu tilføjes denne class ved hjælp af js */
+    .globalNav.active{
+        display: flex;
+        
+    }
+    .navcontainer ul{
+        flex-direction: column;
+        position: absolute;
+        right: 0%;
+        top: 0%;
+        width: 100%;
+        background-color: var(--backgroundColor);
+        z-index: 100;
+        padding-top: var(--Elements_Mobil);
+        padding-bottom: var(--Elements_Mobil);
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    }
+    .dropdownIndhold{
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+        right: 0%;
+    }
+
+    .dropdownLinks a{
+        text-decoration: underline;
+        padding-left: var(--Small_Elements_Mobil);
+    }
+
+    /* animation af burgermenu til et kryds */
+    #linje1, #linje2, #linje3{
+        transition: transform;
+        /* fortæller at animationen skal ske fra midten af svg */
+        transform-origin: center;
+    }
+    /* linje 1 der er en steg beder vi om at rotere med 45grader */
+    #menu.active #linje1{
+        transform: translateY(9.5px) rotate(45deg);
+    }
+          /*gør linje 2 usynlig, da der skal laves et kryds*/
+          #menu.active #linje2 {
+              opacity: 0;
+          }
+         #menu.active #linje3 {
+        transform: translateY(-9.5px) rotate(-45deg);
+    }
+}
+
 
 
 /*  */

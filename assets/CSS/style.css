@@ -32,7 +32,7 @@
 
 /*Variabler*/
 :root {
-    --backgroundColor:#FCFCFC ;
+    --backgroundColor:#fffbfb ;
     --primaeryCTA:#1C009D ;
     --secondaryCTA: #F9B000;
     --cardsColor: #006784;
@@ -171,6 +171,7 @@ img{
 header{
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
     max-height: 5.5rem;
+    background-color: rgb(255, 253, 253);
 }
 #logo{
    
@@ -540,6 +541,9 @@ nav{
 }
 
 /* sektion giv et bidrag */
+.BidragSection{
+    padding-bottom: var(--Section_Mobil);
+}
 .tekstvedBilledeSektion{
     padding-top: var(--Elements_Mobil);
 }
@@ -583,6 +587,50 @@ nav{
         grid-column: 2 / 3;
     }
 }
+
+
+/*  */
+/* Om os siden */
+/*  */
+
+.heroImage{
+    width: 100%;
+    display: block;
+    height: 460px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 100% 15%;
+    }
+}
+  .sectionlayout {
+      margin-top: var(--Section_Mobil);
+      margin-bottom: var(--Section_Mobil);
+  }
+
+.Tekstsection{
+    padding-right: var(--Elements_Mobil);
+    padding-bottom: var(--Elements_Mobil);
+}
+#imgOmos{
+    height: 386px;
+    object-position: 100% 25%;
+
+}
+@media screen and (min-width: 1020px){
+    .sectionlayout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: var(--Section_Desktop);
+            margin-bottom: var(--Section_Desktop);
+        }
+    
+        .Tekstsection {
+            padding-right: var(--Elements_Desktop);
+        }
+}
+
 /**/
 /* Footer */
 /*  */
@@ -593,11 +641,11 @@ footer{
     padding-bottom: var(--Elements_Mobil);
     a{
         font-size: var(--body_text_Mobil);
+        font-weight: 400;
     }
-    p{
-        padding-top: var(--Elements_Mobil);
-    }
-
+}
+#logofooter p{
+    margin-bottom: var(--Small_Elements_Mobil);
 }
 #logofooter img{
     width: 100px;
@@ -608,9 +656,19 @@ footer{
     .footerDiv{
         display: flex;
         align-items: flex-start;
-        gap: 8rem;
+        gap: 6rem;
     }
-    p {padding-bottom: var(--Elements_Mobil);
-    }
+        #logofooter img {
+            width: 150px;
+            padding-top: 0;
+            /* padding-bottom: var(--Elements_Mobil); */
+        }
     
+    footer  a {
+         font-size: var(--body_text_Desktop);
+     }
 }
+/* test af farver! kunne overveje om nogle sektioner skulle have en baggrundsfarve for at bryde designet*/
+/* .BidragSection{
+    background-color: var(--cardsColor)
+} */

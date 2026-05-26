@@ -90,6 +90,7 @@ p{
     font-style: normal;
     line-height: 150%;
     color: var(--textColor);
+    font-size: var(--body_text_Mobil);
 }
 .pTegnAntal {
     max-width: 65ch;
@@ -101,6 +102,7 @@ p{
 .sectionContent{
     max-width: 1200px;
     margin: 0 auto;
+    padding-inline: var(--Elements_Mobil);
 }
 h1 {
     font-size: var(--H1_Mobil);
@@ -127,7 +129,7 @@ h2, h3{
     border: solid 2px var(--secondaryCTA);
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
-#primaeryCTA{
+.primaeryCTA{
     border-radius: 100px;
     text-decoration: none;
     background-color: var(--primaeryCTA);
@@ -141,7 +143,9 @@ h2, h3{
     margin-right: 5px;
     fill: white;
 }
-
+img{
+    border-radius: 15px;
+}
 /*  */
 /* mobil slut */
 /*  */
@@ -149,13 +153,16 @@ h2, h3{
 /*  */
 /* på desktop */
 /*  */
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1100px){
     h1{
         font-size: var(--H1_Desktop);
     }
      h2, h3{
     font-size: var(--H2_Desktop);
- }
+    }
+    p{
+        font-size: var(--body_text_Desktop);
+    }
     
 }
 /*  */
@@ -244,7 +251,7 @@ nav{
     }
 }
 /* mobil NAV */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 900px){
     /* gør så burgermenu bliver synlig under 768px, samt den globale navigation skjules */
     #menu{
         display: flex;
@@ -311,46 +318,107 @@ nav{
 /* Forsiden */
 /*  */
 #heroImageFrontpage{
-    max-width: 584px;
-    height: 468px;
+    /* max-width: 584px; */
+    width: 100%;
+    height: auto;
+    display: block;
     object-fit: cover;
     border-radius: 15px;
 }
 .btnFrontpage{
     /* sætter inline-block til a da det er et inline element og derfor virker margin ikke */
     display: inline-block;
-    margin-top: var(--Elements_Desktop);
+    margin-top: var(--Elements_Mobil);
 }
 .buttonsecondaryFrontpage{
-    margin-left: var(--Small_Elements_Desktop);
+    margin-left: var(--Small_Elements_Mobil);
 }
-.heroSection{
-    margin-top: var(--Elements_Desktop);
-    margin-bottom: var(--Section_Desktop);
+/* søger for at den nederst knap ikke bliver rykket ind på små skærme */
+@media screen and (max-width: 376px){
+    .buttonsecondaryFrontpage {
+            margin-left: 0;
+        }
 }
 
-.tekstHero{
-    max-width: 30rem;
-    margin-right: 8.5rem;
+.heroSection{
+    margin-top: var(--Elements_Mobil);
+    margin-bottom: var(--Section_Mobil);
+    /* display: flex;
+    flex-direction: column; */
+    
+}
+
+
+#tekstPFrontHero{
+    font-size: 1.25rem;
+}
+#lyslivTekst, #tekstPFrontHero{
+    font-size: var(--body_text_Mobil);
 }
 
 #lyslivTekst{
     font-style: italic;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: var(--body_text_Desktop);
     color: #875D00;
-    padding-bottom: var(--Elements_Desktop);
-    padding-top: 0.75rem;
+    padding-bottom: var(--Elements_Mobil);
+   
 }
-#tekstPFrontHero{
-    font-size: 1.25rem;
-}
+/* ønsker ikke pilen på mobil - her er det tydeligt at man kan scroll længere ned */
 .arrowdown{
+    display: none;
+}
+/* har fjernet margin-left efter hjælp fra co-pilot se prompt i rapporten. Fandt ud af at margin skubbede til indholdet. Jeg har derfor sat padding-right på teksten istedet for, da jeg har anvendt  box-sizing: border-box; på det hele  */
+ .imgSection img {
+     height: auto;
+     width: 100%;
+     display: block;
+     object-fit: cover;
+     border-radius: 15px;
+    }
+.SectionIntroFrontpage{
+    margin-top: var(--Section_Mobil);
+    margin-bottom: var(--Section_Mobil);
+}
+.tekstIntroFrontpage{
+    padding-bottom: var(--Elements_Mobil);
+}
+@media screen and (min-width: 1020px) {
+    .heroSection {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: var(--Elements_Desktop);
+            margin-bottom: var(--Section_Desktop); 
+        }
+        
+    .tekstHero{
+        max-width: 30rem;
+        margin-right: 8.5rem;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    #heroImageDiv{
+        grid-column: 2 / 3;
+    }
+        #lyslivTekst {
+            font-size: 1.5rem;
+            padding-bottom: var(--Elements_Desktop);
+            padding-top: 0.75rem;
+                }
+     #tekstPFrontHero{
+            font-size: 1.25rem;
+}
+.buttonsecondaryFrontpage {
+    margin-left: var(--Small_Elements_Desktop);
+}
+
+.arrowdown{
+    display: block;
     fill: var(--textColor);
-    position: absolute;
-        top: 85%;
+    position: relative;
+        top: 0%;
         /* afstand fra toppen */
-        left: 50%;
+        left: 145%;
         transform: translateX(-50%);
         animation: bounce 1.5s infinite;
         
@@ -370,33 +438,179 @@ nav{
             transform: translate(-50%, 0);
         }
     }
-.SectionIntroFrontpage{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: var(--Section_Desktop);
+
+    .SectionIntroFrontpage{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: var(--Section_Desktop);
+        margin-bottom: var(--Section_Desktop);
+        
+    }
+   
+        .tekstIntroFrontpage{
+            padding-right: var(--Elements_Desktop);
+        }
+}
+
+
+
+/* Aktiviteter sektion på forsiden */
+.cardsFrontpage{
+    width: 100%;
+    min-height: 486px;
+    min-width: 250px;
+    position: relative;
+    /* sikre at indhold bliver skjult så der ikke opstår en scollbar på cards */
+    overflow: hidden;
+    
+    
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+
     img{
-        max-width: 584px;
-            height: 468px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-left: var(--Elements_Desktop);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+        
+    }
+    a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        text-decoration: none;
+        scroll-snap-align: start;
+        
     }
 }
 
-@media screen and (min-width: 768px) {
-    .heroSection{
-        display: flex;
-        flex-direction: row-reverse;
+.cardsIndhold{
+    /* sætter indholdet til absolute for at få det placeret ovenpå billedet, bottom 0 placere det i bunden */
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    min-height: 12rem;
+    padding-inline: var(--Small_Elements_Mobil);
+    /* padding-bottom: var(--Small_Elements_Mobil); */
+    padding-top: var(--Small_Elements_Mobil);
+    background: rgba(20, 122, 143, 0.85);
+    .buttonsecondary{
+        margin-top: var(--Elements_Mobil);
+        
     }
+    
+}
+.pcards{
+    color: white;
+    
+}
+.cardwrapper{
+    display: flex;
+    gap: 2rem;
+    /* scroll på mobil kilder:
+     https://www.w3schools.com/CSSref/css_pr_scroll-snap-type.php 
+     https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/
+     */
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    
+    -webkit-overflow-scrolling: touch;
+    margin-top: var(--Small_Elements_Mobil);
+    
+}
+.cardsSection {
+    margin-bottom: var(--Section_Mobil);
 }
 
 
+@media screen and (min-width: 1020px) {
+.cardsSection{
+    margin-bottom: var(--Section_Desktop);
+}
+.cardsFrontpage {
+    box-shadow: 4px 6px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 378px;
+}
 
+.cardwrapper{
+    margin-top: var(--Small_Elements_Desktop);
+}
 
+}
+
+/* sektion giv et bidrag */
+.tekstvedBilledeSektion{
+    padding-top: var(--Elements_Mobil);
+}
+/* sat display inline- block efter hjælp fra co-poilot, se rapport for prompt */
+.BtnvedBilledeSektion{
+    margin-top: var(--Elements_Mobil);
+    display: inline-block;
+    margin-bottom: var(--Elements_Mobil);
+}
+/* gør billedet responsivt, højde justeres automatisk men billedet fylder hele bredden */
+#ImageDivBidrag{
+    height: auto;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+@media screen and (min-width: 1020px){
+    .tekstvedBilledeSektion {
+        padding-top: var(--Elements_Desktop);
+    }
+    /* sat display inline- block efter hjælp fra co-poilot, se rapport for prompt */
+    .BtnvedBilledeSektion {
+        display: inline-block;
+        margin-top: var(--Elements_Desktop);
+    }
+    .BidragSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: var(--Elements_Desktop);
+        margin-bottom: var(--Section_Desktop);
+    }
+    
+    .tekstbidrag {
+        max-width: 30rem;
+        margin-right: 8.5rem;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    
+    #ImageDivBidrag {
+        grid-column: 2 / 3;
+    }
+}
 /**/
 /* Footer */
 /*  */
 footer{
-    display: flex;
-    align-items: center;
+    padding-inline: var(--Elements_Mobil);
+    padding-top: var(--Section_Mobil);
+    background-color: #F6F6F6;
+    padding-bottom: var(--Elements_Mobil);
+    a{
+        font-size: var(--body_text_Mobil);
+    }
+    p{
+        padding-top: var(--Elements_Mobil);
+    }
+
+}
+#logofooter img{
+    width: 100px;
+    padding-top: var(--Elements_Mobil);
+    padding-bottom: var(--Elements_Mobil);
+}
+@media screen and (min-width: 1020px){
+    .footerDiv{
+        display: flex;
+        align-items: flex-start;
+        gap: 8rem;
+    }
+    p {padding-bottom: var(--Elements_Mobil);
+    }
+    
 }

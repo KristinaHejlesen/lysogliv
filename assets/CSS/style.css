@@ -366,7 +366,7 @@ nav{
    
 }
 /* ønsker ikke pilen på mobil - her er det tydeligt at man kan scroll længere ned */
-.arrowdown{
+.arrowdown, .arrowdown2{
     display: none;
 }
 /* har fjernet margin-left efter hjælp fra co-pilot se prompt i rapporten. Fandt ud af at margin skubbede til indholdet. Jeg har derfor sat padding-right på teksten istedet for, da jeg har anvendt  box-sizing: border-box; på det hele  */
@@ -422,9 +422,21 @@ nav{
         left: 145%;
         transform: translateX(-50%);
         animation: bounce 1.5s infinite;
-        
+       
     }
+        .arrowdown2 {
+            display: block;
+            fill: var(--textColor);
+            position: relative;
+            top: 0%;
+            /* afstand fra toppen */
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 1.5s infinite;
+            /* hjælp fra co-pilot da pilen fyldte længere ud på grund browseren reservere ekstra plads til svg. Jeg har derfor løst det med at lave den til et inline-block element, så pladsen ikke reserves og svg fylder sin egen bredde og ikke hele siden ud */
+            display: inline-block;
     
+        }
     /* Pil-ned animation */
     @keyframes bounce {
         0% {
@@ -523,6 +535,15 @@ nav{
 .cardsSection {
     margin-bottom: var(--Section_Mobil);
 }
+.buttonCards{
+    border-radius: 100px;
+    padding: 0.7rem 2rem 0.7rem 2rem;
+    background-color: var(--secondaryCTA);
+    text-decoration: none;
+    color: var(--textColor) #00222E;
+    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+}
 
 
 @media screen and (min-width: 1020px) {
@@ -563,6 +584,7 @@ nav{
 @media screen and (min-width: 1020px){
     .tekstvedBilledeSektion {
         padding-top: var(--Elements_Desktop);
+        font-size: 1rem;
     }
     /* sat display inline- block efter hjælp fra co-poilot, se rapport for prompt */
     .BtnvedBilledeSektion {
@@ -598,38 +620,83 @@ nav{
     display: block;
     height: 460px;
     img{
+        border-radius: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: 100% 15%;
+        object-position: 70% 15%;
     }
 }
-  .sectionlayout {
-      margin-top: var(--Section_Mobil);
-      margin-bottom: var(--Section_Mobil);
-  }
+.sectionlayout {
+    margin-top: var(--Elements_Mobil);
+    margin-bottom: var(--Section_Mobil);
+}
 
 .Tekstsection{
     padding-right: var(--Elements_Mobil);
     padding-bottom: var(--Elements_Mobil);
 }
-#imgOmos{
+#imgOmosimg{
     height: 386px;
     object-position: 100% 25%;
-
 }
-@media screen and (min-width: 1020px){
-    .sectionlayout {
+#Omosimg2{
+    height: 386px;
+    object-position: 100% 15%;   
+}
+
+/* bidrag sektion */
+#imgOmosBidrag{
+    width: 100%;
+    display: block;
+    height: 386px;
+    object-fit: cover;
+}
+/* .btnspaceRight {
+    margin-right: var(--Small_Elements_Mobil);
+    } */
+    #tekstsection2{
+        margin-bottom: var(--Small_Elements_Mobil);
+    }
+    @media screen and (min-width: 1020px){
+        .heroImageOmos{
+            object-position: 100% 15%;
+        }
+        .sectionlayout {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            margin-top: var(--Section_Desktop);
+            margin-top: var(--Elements_Desktop);
             margin-bottom: var(--Section_Desktop);
         }
-    
+        
         .Tekstsection {
             padding-right: var(--Elements_Desktop);
         }
+        .imgOmosimg2{
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+    #tekstsection2{
+        grid-column: 2 / 3;
+        margin-left: var(--Elements_Desktop);
+    }
+    
+    .btnspaceRight{
+       margin-right: var(--Small_Elements_Desktop);
+    }
 }
+
+
+/*  */
+/* Aktiviteter siden */
+/*  */
+#imgAktiviterBidrag {
+    width: 100%;
+    display: block;
+    height: 386px;
+    object-fit: cover;
+}
+
 
 /**/
 /* Footer */
@@ -642,6 +709,7 @@ footer{
     a{
         font-size: var(--body_text_Mobil);
         font-weight: 400;
+        line-height: 200%;
     }
 }
 #logofooter p{

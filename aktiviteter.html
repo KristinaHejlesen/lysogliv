@@ -8,34 +8,187 @@
     <script src="./assets/JS/app.js" defer></script>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="/index.html">
+                <img id="logo" src="./assets/img/lys_og_liv_logo_med_payoff.png" aria-label="logo klik til forsiden"
+                    alt="logo">
+            </a>
+            <div class="globalNav">
+                <div class="navcontainer">
+                    <ul>
+                        <li><a href="/index.html">Forsiden</a></li>
+    
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn">Om foreningen <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                        viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                                        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                                    </svg>
+                                </button>
+                                <div class="dropdownIndhold dropdownLinks">
+                                    <a href="/omos.html">Om os</a>
+                                    <a href="#">Blog indlæg</a>
+                                    <a href="#">Bestyrelsen</a>
+                                    <a href="#">Vedtægter</a>
+                                    <a href="#">Indsamlings etik</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/aktiviteter.html">Aktiviteter</a>
+                        </li>
+                        <li>
+                            <a href="/blivFrivillig.html">Bliv frivillig</a>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+    
+                                <button class="dropbtn">Sponsorer <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                        viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                                        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                                    </svg></button>
+                                <div class="dropdownIndhold dropdownLinks">
+                                    <a href="/blivsponsor.html">Bliv sponsor</a>
+                                    <a href="/allesponsorer.html">Alle sponsorer</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <a class="primaeryCTA" href="#"><svg id="primaeryCTAsvg" xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path
+                        d="M440-501Zm0 381L313-234q-72-65-123.5-116t-85-96q-33.5-45-49-87T40-621q0-94 63-156.5T260-840q52 0 99 22t81 62q34-40 81-62t99-22q81 0 136 45.5T831-680h-85q-18-40-53-60t-73-20q-51 0-88 27.5T463-660h-46q-31-45-70.5-72.5T260-760q-57 0-98.5 39.5T120-621q0 33 14 67t50 78.5q36 44.5 98 104T440-228q26-23 61-53t56-50l9 9 19.5 19.5L605-283l9 9q-22 20-56 49.5T498-172l-58 52Zm280-160v-120H600v-80h120v-120h80v120h120v80H800v120h-80Z" />
+                </svg>Støt os</a>
+    
+            <button id="menu" aria-label="Åben menu">
+                <!-- Copyright Kristina Hejlesen - eksporteret fra figma design lys og liv -->
+                <svg width="33" height="25" viewBox="0 0 33 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="linje1" d="M1.36251 1.3625H31.2349" stroke="#00222E" stroke-width="2.72501"
+                        stroke-linecap="round" />
+                    <path id="linje2" d="M1.36251 12.3409H31.2349" stroke="#00222E" stroke-width="2.72501"
+                        stroke-linecap="round" />
+                    <path id="linje3" d="M1.36251 23.3192H31.2349" stroke="#00222E" stroke-width="2.72502"
+                        stroke-linecap="round" />
+                </svg>
+    
+            </button>
+        </nav>
+    </header>
     <main>
-        <section>
-            <img src="" alt="">
-        </section>
-        <section>
-            <h1>Aktiviteter</h1>
-            <p>Læs om de spændende aktiviteter og arrangementer med lys og liv. Lad os sammen skabe lys og liv i hverdagen.</p>
-            <div class="aktiviteterCards">
-                <a href="">
-                    <img src="" alt="">
-                    <div class="overlayCardsAktiviteter">
-                        <p>titel</p>
-                        <p>Dato</p>
-                        <p>Beskrivelse</p>
-                        <button>Læs om aktiviteten</button>
+        <div class="heroImage">
+            <img src="./assets/img/heroAktiviteterlysogliv.jpg" alt="">
+
+        </div>
+        <div class="arrowdown2"><svg class="svgArrow" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960"
+                width="48px" fill="#1f1f1f">
+                <path
+                    d="M480-200 240-440l56-56 184 183 184-183 56 56-240 240Zm0-240L240-680l56-56 184 183 184-183 56 56-240 240Z" />
+            </svg>
+        </div>
+        
+        <section class="sectionContent cardsSection">
+            <h2>Aktiviteter</h2>
+            <p class="pTegnAntal">Læs om de spændende aktiviteter og arrangementer med lys og liv. Lad os sammen skabe lys og
+                liv i hverdagen.</p>
+            <div class="cardwrapper">
+                <a class="cardsFrontpage" href="">
+        
+                    <img src="./assets/img/tirsbaekStrandKlovnelob.jpg" alt="">
+                    <div class="cardsIndhold">
+                        <p class="pcards">Tirsbæk Strand Klovneløb</p>
+                        <p class="pcards">22. August 2026</p>
+                        <p class="pcards"> Tag familien med - løb sammen med os og støt Danske Hospitalsklovne</p>
+                        <p class="buttonCards">Læs om aktiviteten</p>
                     </div>
+        
                 </a>
+                <a class="cardsFrontpage" href="">
+        
+                    <img src="./assets/img/klovnefortaelling.jpg" alt="">
+                    <div class="cardsIndhold">
+                        <p class="pcards">Årets klovnefortælling</p>
+                        <p class="pcards">Dato</p>
+                        <p class="pcards">Årets klovnefortælling - Hvordan har en hospitalsklovn hjulpet dig</p>
+                        <p class="buttonCards">Læs om aktiviteten</p>
+                    </div>
+        
+                </a>
+        
+                <a class="cardsFrontpage" href="">
+        
+                    <img src="./assets/img/SkridtforSindetlogoCards.jpg" alt="">
+                    <div class="cardsIndhold">
+                        <p class="pcards">Skridt for sindet</p>
+                        <p class="pcards">Dato</p>
+                        <p class="pcards">Tag familien med - løb sammen med os og støt Danske Hospitalsklovne</p>
+                        <p class="buttonCards">Læs om aktiviteten</p>
+                    </div>
+        
+                </a>
+        
             </div>
         </section>
-        <section>
-            <div>
-                <h2>Læs om de spændende aktiviteter og arrangementer med lys og liv. Lad os sammen skabe lys og liv i hverdagen.</h2>
-                <p>Gør en forskel som frivillig hos Lys og Liv. Hjælp børn og unge, der har oplevet sygdom og overgreb, og så du med på
-                klovneteamet der er løbsarrangør af Tirsbæk Strand Klovneløb.</p>
-                <a class="assets/CSS/style.css" href="">Bliv frivillig</a>
+        <section class="sectionContent BidragSection">
+            <div class="tekstbidrag">
+                <h2>Lad os sammen skabe lys og liv i hverdagen.</h2>
+                <p class="tekstvedBilledeSektion">Gør en forskel som frivillig hos Lys og Liv. Hjælp børn og unge, der har oplevet sygdom og overgreb, og så kan du komme med på vores fantastiske
+                klovneteamet, der er løbsarrangør af Tirsbæk Strand Klovneløb.</p>
+                <a class="buttonsecondary BtnvedBilledeSektion"href="">Bliv frivillig</a>
             </div>
-            <img src="" alt="">
+            <div>
+                <img id="imgAktiviterBidrag" src="./assets/img/aktiviteterbidrag.jpg" alt="">
+            </div>
         </section>
     </main>
+    <footer>
+        <div class="footerDiv sectionContent">
+    
+            <div>
+                <p>
+    
+                    <strong>Kontakt os</strong>
+                </p>
+                <!-- obs husk ikoner -->
+                <p>Adresse: Sofievej 12, 1 th, 7100 Vejle, Denmark</p>
+                <p>e-mail: mll@lys-og-liv.dk</p>
+                <p>Tlf: 40798878</p>
+            </div>
+            <div id="logofooter">
+                <img src="./assets/img/lys_og_liv_logo_med_payoff.png" alt="">
+                <p>CVR-nr.: 45720519</p>
+            </div>
+            <div>
+                <p><strong>Juridiske oplysninger:</strong></p>
+                <div>
+                    <a href="">Vedtægter</a>
+                    <br>
+                    <a href="">Bestyrrelsen</a>
+                    <br>
+                    <a href="">Indsamlingsetik</a>
+                    <br>
+                    <a href="">Cookiepolitik</a>
+                    <br>
+                    <a href="">Privatlivspolitik</a>
+    
+                </div>
+                <br>
+            </div>
+            <div>
+                <p><strong>Samarbejdspartner:</strong></p>
+                <div>
+                    <a href="">Hospitalsklovnene</a>
+                    <br>
+                    <a href="">Klovneløb</a>
+                    <br>
+                    <a href="">Tirsbæk gods</a>
+    
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

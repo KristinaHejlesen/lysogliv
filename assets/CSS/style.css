@@ -697,7 +697,169 @@ nav{
     object-fit: cover;
 }
 
+/*  */
+/* Aktivteter single */
+/*  */
+.metadataAktiviteter{
+    display: flex;
+    gap: var(--Small_Elements_Mobil);
+    /* padding-bottom: var(--Elements_Mobil); */
+}
+#h1AktivSingle{
+    padding-top: var(--Elements_Mobil);
+}
 
+  @media screen and (min-width: 1020px){
+    .metadataAktiviteter {
+            gap: var(--Small_Elements_Desktop);
+            /* padding-bottom: var(--Elements_Desktop); */
+        }
+        #h1AktivSingle {
+            padding-top: var(--Elements_Desktop);
+        }
+  }
+/* accodion styling */
+  .accodionIndhold.open{
+    display: block;
+  }
+.accodionIndhold{
+    display: none;
+    border: solid 2px var(--textColor);
+    padding: var(--Small_Elements_Mobil);
+    border-radius: 0px 0px 15px 15px;
+}
+.accordionOverskrift{
+    font-size: var(--H3_Mobil);
+}
+.accodion{
+    width: 100%;
+    border: solid 2px var(--textColor);
+    padding: var(--Elements_Mobil);
+    text-align: left;
+    /* flytter pilen helt ud til højre side */
+    display: flex;
+    justify-content: space-between;
+}
+
+.tesxtAccodion{
+    padding-bottom: var(--Small_Elements_Mobil);
+}
+.accodion svg{
+    vertical-align: middle;
+    
+}
+/*  */
+.liAktivtetSingle{
+    font-size: var(--body_text_Mobil);
+    font-family: 'Roboto';
+    color: var(--textColor);
+    line-height: 150%;
+}
+.paddingUl{
+    padding-bottom: var(--Small_Elements_Mobil);
+}
+ @media screen and (min-width: 1020px){
+    .tesxtAccodion {
+            padding-bottom: var(--Small_Elements_Desktop);
+        }
+    .liAktivtetSingle {
+            font-size: var(--body_text_Desktop);
+        }
+    
+        .paddingUl {
+            padding-bottom: var(--Small_Elements_Desktop);
+        }
+ }
+
+/*  */
+
+/*  */
+/* Bliv frivillig */
+/*  */
+#imgheroBlivfrivillig{
+    object-position: 100% 50%;
+
+}
+#imageFrivilligbanner{
+    width: 100%;
+    height: 26rem;
+    display: block;
+    object-fit: cover;
+    border-radius: 0;
+    object-position: 100% 1%;
+   
+}
+.textonImageFrivillig{
+    /* top: 0%;
+    position: absolute; */
+    background-color: var(--cardsColor);
+    height: 100%;
+    /* height: 26rem;
+    width: 260px; */
+    display: block;
+    /* margin-left: var(--Elements_Mobil);
+    margin-right: var(--Elements_Mobil); */
+    padding: var(--Small_Elements_Mobil);
+}
+.italic{
+    font-style: italic;
+}
+.hvidTekstonImg{
+    color: white;
+}
+
+.bannerSection{
+    margin-bottom: var(--Section_Mobil);
+}
+.tesxtAccodion a{
+    margin-top: var(--Elements_Mobil);
+    display: inline-block;
+}
+.job{
+    margin-bottom: var(--Section_Mobil);
+}
+@media screen and (min-width: 1020px){
+    .bannerSection{
+        position: relative;
+        margin-bottom: var(--Section_Desktop);
+    }
+    .textonImageFrivillig {
+        top: 0%;
+        position: absolute;
+        height: 34rem;
+        width: 481px;
+        margin-left: var(--Section_Desktop);
+        padding: var(--Small_Elements_Desktop);
+            
+            
+        
+        }
+    #imageFrivilligbanner {
+        height: 34rem;
+                    
+                }
+    .job{
+        margin-bottom: var(--Section_Desktop);
+}
+    
+}
+
+/*  */
+
+/*  */
+/* Alle sponsorer */
+/*  */
+.gridSponsor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--Small_Elements_Desktop);
+}
+.gridSponsor img{
+    width: 100%;
+    max-height: 486px;
+    max-width: 378px;
+
+}
 /**/
 /* Footer */
 /*  */

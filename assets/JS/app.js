@@ -58,3 +58,19 @@ window.onclick = function(luk) {
     });
   }
 }
+
+// accordian
+/*Accordion */
+function startAccordion() {
+  // find alle elementer med class accodion og for hver button tilføj en eventlistner der lytter efter klik 
+  document.querySelectorAll(".accodion").forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Toggle den aktuelle button ved at tilføje class til det næste element som her er accordinIndhold, open giver display block og indholdet vises, da denne ellers uden class open er sat til display none
+      button.classList.toggle("open");
+      button.nextElementSibling.classList.toggle("open");
+    });
+  });
+}
+// funktionen kaldes
+startAccordion();
